@@ -27,6 +27,7 @@ Simply invoke the client-side event with the list of players that you want to tr
 ```lua
 local players = {"-1"}
 TriggerClientEvent('tofu-satellite:open', -1, players, 0)
+-- TriggerClientEvent('tofu-satellite:open', -1, <table of players>, <timeout in seconds, 0 = disabled>)
 ```
 
 ### Commands
