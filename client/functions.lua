@@ -49,6 +49,7 @@ function HudControls()
         local satPos = GetCamCoord(Satellite.Camera)
         local heading = rotation.z
         local _, ground = GetGroundZFor_3dCoord(satPos.x, satPos.y, satPos.z, 0)
+        local playerIdx, ped, pedPos = nil, nil, nil
         SetFocusPosAndVel(satPos.x, satPos.y, ground, 0, 0, 0)
 
         -- scroll whell down
@@ -103,6 +104,15 @@ function HudControls()
                 SetCamCoord(Satellite.Camera, satPos)
             end
         else
+            if #Satellite.TrackingPeds > 0 then
+                playerIdx = GetPlayerFromServerId(Satellite.TrackingPeds[1])
+                ped = GetPlayerPed(playerIdx)
+                if ped ~= 0 then
+                    pedPos = GetEntityCoords(Satellite.PlayerPedID)
+                    satPos = GetObjectOffsetFromCoords(pedPos.x, pedPos.y, satPos.z, heading, Satellite.MoveSpeed, 0, 0)
+                    SetCamCoord(Satellite.Camera, satPos)
+                end
+            end
             DrawTextXY(Satellite.HudText,
                 { centre = 0, x = 0.10300, y = 0.10000, scale = 0.85, rgba = { 255, 100, 100, 180 } })
         end
