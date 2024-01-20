@@ -4,6 +4,8 @@ FiveM client-side spy satellite that can automatically track players, or use man
 
 This resource could be used in cases like accessing a laptop or as a result from some sort of hacking/minigame.
 
+![Spy Satellite](./docs/tracker1.png)
+
 ### Features
 
 - Automated tracking mode
@@ -12,13 +14,11 @@ This resource could be used in cases like accessing a laptop or as a result from
 - Configurable timeout, zoom, speed, and camera rotations
 - Tracks players that are out of view with indicator arrows
 
-![Spy Satellite](./docs/tracker1.png)
-
 ### Dependencies
 
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 
-\_Note: If you want to run this without qb-core dependency, simply delete `server/commands.lua` and substitue the qbcore arithmatic functions with an equivalent in `client/threads.lua`.
+_Note: If you want to run this without qb-core dependency, simply delete `server/commands.lua` and substitue the qbcore arithmatic functions with an equivalent in `client/threads.lua`_.
 
 ### How to use
 
