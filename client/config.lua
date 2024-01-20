@@ -10,6 +10,6 @@ Satellite.MinHeight = 100
 -- Sets the maxium height that the camera can be zoomed out to.
 Satellite.MaxHeight = 800
 -- Sets the speed at which the player can move the satellite around in manual tracking mode.
-Satellite.MoveSpeed = 4
+Satellite.MoveSpeed = 4.000
 -- Sets the rate at which the camera can be zoomed in/out by.
 Satellite.ZoomSpeed = 6

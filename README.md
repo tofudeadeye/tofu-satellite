@@ -9,7 +9,7 @@ This resource could be used in cases like accessing a laptop or as a result from
 ### Features
 
 - Automated tracking mode
-- Manual tracking mode
+- Manual tracking mode _(`w`,`a`,`s`,`d` to move around, scroll wheel to zoom)_
 - Simulated rotaton / angle shift to represent to some degree orbital shifts
 - Configurable timeout, zoom, speed, and camera rotations
 - Tracks players that are out of view with indicator arrows
