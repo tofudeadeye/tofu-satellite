@@ -30,7 +30,13 @@ Citizen.CreateThread(function()
             end
 
             if Satellite.Camera == nil then
+                -- default camera position is that of the player
                 pos = GetEntityCoords(Satellite.PlayerPedID)
+                if #Satellite.TrackingPeds > 0 then
+                    -- if tracking targets, set camera position to that of the first target
+                    pos = GetEntityCoords(GetPlayerPed(Satellite.TrackingPeds[1].PlayerData.source))
+                end
+
                 Satellite.Camera = CreateCam("DEFAULT_SCRIPTED_CAMERA", false)
                 SetCamCoord(Satellite.Camera, vector3(pos.x, pos.y, Satellite.MaxHeight))
                 SetCamRot(Satellite.Camera, -80.00000, CameraRotX, 0.00000, 2)

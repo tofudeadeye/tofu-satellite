@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
         if Satellite.IsOpen then
             if #Satellite.TrackingPeds > 0 then
                 for _, p in pairs(Satellite.TrackingPeds) do
-                    playerIdx = GetPlayerFromServerId(p)
+                    playerIdx = GetPlayerFromServerId(p.PlayerData.source)
                     ped = GetPlayerPed(playerIdx)
                     if ped ~= 0 then
                         pos = GetEntityCoords(ped)

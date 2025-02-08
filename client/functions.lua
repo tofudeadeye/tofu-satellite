@@ -105,7 +105,7 @@ function HudControls()
             end
         else
             if #Satellite.TrackingPeds > 0 then
-                playerIdx = GetPlayerFromServerId(Satellite.TrackingPeds[1])
+                playerIdx = GetPlayerFromServerId(Satellite.TrackingPeds[1].PlayerData.source)
                 ped = GetPlayerPed(playerIdx)
                 if ped ~= 0 then
                     pedPos = GetEntityCoords(Satellite.PlayerPedID)

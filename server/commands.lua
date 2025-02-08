@@ -10,10 +10,10 @@ QBCore.Commands.Add('trackallplayerstimeout', 'track all players for 30 seconds'
     TriggerClientEvent('tofu-satellite:open', source, players, 30)
 end, 'admin')
 
-QBCore.Commands.Add('trackphone', 'track all players', {}, false, function(source, args)
+QBCore.Commands.Add('trackphone', 'track player by phone', {}, false, function(source, args)
     local player = QBCore.Functions.GetPlayerByPhone(args[1])
     if player ~= nil then
-        TriggerClientEvent('tofu-satellite:open', source, { tostring(player) }, 0)
+        TriggerClientEvent('tofu-satellite:open', source, { player }, 0)
     end
 end, 'admin')
 
